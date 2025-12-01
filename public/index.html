@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EASY DOC IN — Text & Video Consults</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>EASY DOC IN</h1>
+      <p class="tag">Free text-based prescriptions · Paid video-call consultations</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>How it works</h2>
+      <ol>
+        <li>Text-based consult: free — fill the short form below and receive a written prescription via email.</li>
+        <li>Video consult: paid — book a video call (Stripe payment). After payment you receive a meeting link by email.</li>
+      </ol>
+    </section>
+
+    <section id="text-consult">
+      <h2>Free Text Consult</h2>
+      <form id="textForm">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Age<input type="number" name="age" min="0"></label>
+        <label>Phone or Email<input type="text" name="contact" required></label>
+        <label>Short history / symptoms<textarea name="message" rows="6" required></textarea></label>
+        <div class="actions">
+          <button type="submit">Send for Free Consultation</button>
+        </div>
+        <p class="note">You will receive a confirmation by the contact you provide.</p>
+      </form>
+      <div id="textResult" class="result"></div>
+    </section>
+
+    <section id="video-consult">
+      <h2>Paid Video Consult</h2>
+      <p>To book a video consultation (15 minutes) — pay and you will receive a booking link and meeting URL by email.</p>
+      <form id="videoForm">
+        <label>Name<input type="text" name="vname" required></label>
+        <label>Phone or Email<input type="text" name="vcontact" required></label>
+        <label>Fee (INR)<input type="number" name="price" value="500" required></label>
+        <div class="actions">
+          <button id="payButton" type="button">Pay & Book Video Call</button>
+        </div>
+      </form>
+      <div id="videoResult" class="result"></div>
+      <p class="small">Payments are handled by Stripe Checkout (server). This demo requires backend configuration (see README).</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Privacy</h2>
+      <p>All consultations are confidential. This demo site stores data in a local SQLite database when running the backend.</p>
+      <p class="disclaimer">Medical disclaimer: This website is a demo and should not be used as a replacement for in-person medical care. Always seek emergency services when needed.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© EASY DOC IN — Demo website</p>
+    </div>
+  </footer>
+
+<script src="/script.js"></script>
+</body>
+</html>

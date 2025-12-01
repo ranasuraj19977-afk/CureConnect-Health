@@ -1,0 +1,20 @@
+/* Simple responsive styles */
+:root { --maxw: 900px; --accent: #1d6fa5; --muted: #666; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+*{box-sizing:border-box}
+body{margin:0;color:#222;line-height:1.45}
+.container{max-width:var(--maxw);margin:0 auto;padding:20px}
+.hero{background:linear-gradient(90deg,#e6f2fb,#ffffff);padding:36px 0;border-bottom:1px solid #eee}
+.hero h1{margin:0;font-size:28px;letter-spacing:1px}
+.tag{color:var(--muted);margin-top:6px}
+section{margin:28px 0;padding:18px;background:#fafafa;border-radius:8px;border:1px solid #f0f0f0}
+label{display:block;margin:8px 0;font-weight:600}
+input[type=text],input[type=number],textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;margin-top:6px}
+.actions{margin-top:12px}
+button{background:var(--accent);color:white;padding:10px 14px;border:none;border-radius:6px;cursor:pointer}
+button:active{transform:translateY(1px)}
+.result{margin-top:12px;padding:10px;border-left:4px solid #1d6fa5;background:#fff}
+.note{font-size:13px;color:var(--muted)}
+.small{font-size:13px;color:var(--muted)}
+.disclaimer{font-size:13px;color:#a33}
+footer{padding:18px 0;border-top:1px solid #eee;text-align:center;color:var(--muted);font-size:14px}
+@media(min-width:720px){.hero h1{font-size:36px}}
