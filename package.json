@@ -2,6 +2,10 @@
   "name": "easydoc-in",
   "version": "1.0.0",
   "description": "EASY DOC IN - Telemedicine demo with backend, Stripe Checkout, SendGrid, and Jitsi links",
+  "engines": {
+  "node": "18.x"
+},
+
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
